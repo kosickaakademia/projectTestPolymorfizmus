@@ -10,6 +10,7 @@ public class Main {
         ((B)p2).print(); // vypise print z triedy C
         p2.wildAnimal(); // vypise cow
         ((C)p2).programmingLanguage();  // metodu mozem volat len po pretypovani na B alebo C
+        ((C) p2).drink();
 
         A p3 = new A();  // vola sa konstruktor A
         p3.wildAnimal();  // vypise horse
@@ -21,9 +22,25 @@ public class Main {
         C p5 = new C(); // vila sa kontruktor A,B a nakoniec C
         p5.print(); // vypise C
 
-        A p6 = new A("mobil phone");
+        A p6 = new A("mobil phone","Milan");
 
+        I1 p7= new C();
+        ((C)p7).day();
 
+        B p8 = new C();
+        p8.print();
+        p8.time();
+
+        I2 p9 = new C();
+        p9.drink();
+        ((C)p9).time();
+
+        A p10 = new A();
+        p10.time();
+
+        String data = "Fero";
+        M m = new M();
+        m.start(data);
     }
 
 
