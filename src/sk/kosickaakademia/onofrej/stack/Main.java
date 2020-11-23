@@ -2,7 +2,7 @@ package sk.kosickaakademia.onofrej.stack;
 
 public class Main {
     public static void main(String[] args) {
-        Stack zas = new Stack(4);
+        Stack<Integer> zas = new Stack<>(4);
         zas.push(15);
         zas.push(-10);
         zas.push(21);
@@ -12,5 +12,7 @@ public class Main {
         zas.push(82);
         zas.push(9);
         zas.print();
+
+        Stack<String> inyZas = new Stack<>(5);
     }
 }

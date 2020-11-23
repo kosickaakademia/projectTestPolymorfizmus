@@ -3,9 +3,9 @@ package sk.kosickaakademia.onofrej.stack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Stack {
+public class Stack<T> {
     private int capacity;
-    private List<Integer> array;
+    private List<T> array;
 
     public Stack (int c){
         this.capacity=c;
@@ -28,7 +28,7 @@ public class Stack {
         return capacity==array.size();
     }
 
-    public void push(int value){
+    public void push(T value){
         if(isFull()){
             System.out.println("Stack is full!");
         }
@@ -44,10 +44,10 @@ public class Stack {
             array.remove(array.size()-1);
     }
 
-    public int top(){
+    public T top(){
         if(isEmpty()){
             System.out.println("Stack is empty");
-            return 0;
+            return null;
         }
         else
             return array.get(array.size()-1);
@@ -55,7 +55,7 @@ public class Stack {
 
     public void print(){
         System.out.println();
-        for(Integer t:array)
+        for(T t:array)
             System.out.print(t+"  ");
     }
 
