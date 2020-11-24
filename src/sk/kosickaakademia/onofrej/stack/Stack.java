@@ -3,6 +3,7 @@ package sk.kosickaakademia.onofrej.stack;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Stack<T> {
     private int capacity;
     private List<T> array;
@@ -28,17 +29,17 @@ public class Stack<T> {
         return capacity==array.size();
     }
 
-    public void push(T value){
+    public void push(T value) throws StackException {
         if(isFull()){
-            System.out.println("Stack is full!");
+            throw new StackException("Stack is full!");
         }
         else
             array.add(value);
     }
 
-    public void pop(){
+    public void pop() throws StackException {
         if(isEmpty()){
-            System.out.println("Stack is empty");
+            throw new StackException("Stack is empty!");
         }
         else
             array.remove(array.size()-1);

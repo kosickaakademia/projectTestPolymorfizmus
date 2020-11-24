@@ -2,17 +2,18 @@ package sk.kosickaakademia.onofrej.stack;
 
 public class Main {
     public static void main(String[] args) {
-        Stack<Integer> zas = new Stack<>(4);
-        zas.push(15);
-        zas.push(-10);
-        zas.push(21);
-        zas.print();
-        zas.pop();
-        zas.push(35);
-        zas.push(82);
-        zas.push(9);
-        zas.print();
-
-        Stack<String> inyZas = new Stack<>(5);
+        Stack<Integer> stack = new Stack<>(3);
+        try {
+            stack.push(45);
+            stack.push(9);
+            stack.push(12);
+            stack.pop();
+            stack.pop();
+            stack.pop();
+            stack.pop();
+            stack.print();
+        }catch(StackException ex){
+            ex.printStackTrace(); //System.out.println(ex.getMessage());
+        }
     }
 }
