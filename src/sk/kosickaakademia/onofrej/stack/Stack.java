@@ -31,6 +31,7 @@ public class Stack<T> {
 
     public void push(T value) throws StackException {
         if(isFull()){
+
             throw new StackException("Stack is full!");
         }
         else
